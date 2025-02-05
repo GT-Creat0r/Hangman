@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Hangman Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Hangman game built using React and TypeScript.
 
-Currently, two official plugins are available:
+## Features
+- Interactive keyboard for letter guessing
+- Hangman drawing updates based on incorrect guesses
+- Win and lose detection
+- Restart functionality using the "Enter" key
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/hangman-game.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd hangman-game
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How to Play
+- Press any letter key to guess a letter.
+- If the guessed letter is in the word, it will be revealed.
+- If the guessed letter is incorrect, a part of the hangman drawing will appear.
+- You lose after 6 incorrect guesses.
+- You win if you guess all letters correctly.
+- Press "Enter" to restart the game.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## File Structure
+```
+/
+├── src/
+│   ├── components/
+│   │   ├── HangmanDrawing.tsx
+│   │   ├── HangmanWord.tsx
+│   │   ├── Keyboard.tsx
+│   ├── wordList.json
+│   ├── App.tsx
+│   ├── index.tsx
+├── package.json
+├── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Future Enhancements
+- Add difficulty levels
+- Implement a scoring system
+- Improve UI with animations and styling
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
