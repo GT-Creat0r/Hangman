@@ -49,12 +49,3 @@ A simple Hangman game built using React and TypeScript.
 ├── package.json
 ├── README.md
 ```
-
-## Future Enhancements
-- Add difficulty levels
-- Implement a scoring system
-- Improve UI with animations and styling
-
-## License
-This project is open-source and available under the [MIT License](LICENSE).
-
