@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import words from "./wordList.json";
 import HangmanDrawing from "./components/HangmanDrawing";
 import HangmanWord from "./components/HangmanWord";
-import Keyboard from "./components/Keyboard";
+import Keyboard from "./components/Keyboard/Keyboard";
 
 function getWord() {
   return words[Math.floor(Math.random() * words.length)];
