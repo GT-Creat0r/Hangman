@@ -35,17 +35,3 @@ A simple Hangman game built using React and TypeScript.
 - You win if you guess all letters correctly.
 - Press "Enter" to restart the game.
 
-## File Structure
-```
-/
-├── src/
-│   ├── components/
-│   │   ├── HangmanDrawing.tsx
-│   │   ├── HangmanWord.tsx
-│   │   ├── Keyboard.tsx
-│   ├── wordList.json
-│   ├── App.tsx
-│   ├── index.tsx
-├── package.json
-├── README.md
-```
